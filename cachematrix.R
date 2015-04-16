@@ -1,6 +1,6 @@
 ## Functions that get inverse matrix with ability to cache it
 
-## Create the matrix object which cache its inverse
+## Create the makeCacheMatrix object which cache its inverse.
 makeCacheMatrix <- function(x = matrix()) {
         
         ## initiate the inverse property to NULL
@@ -30,8 +30,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Return a matrix that is the inverse of 'x' from cache.
-## If it's not cached, compute it and cache it using makeCacheMatrix.
+## Return a matrix that is the inverse of 'x' which is created by makeCacheMatrix.
+## It uses cache data first,
+## If it's not cached, caculate it and cache it using makeCacheMatrix.
 cacheSolve <- function(x, ...) {
         ## Try to get it from cache
         i <- x$getinverse()
